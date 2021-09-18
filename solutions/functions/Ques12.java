@@ -2,7 +2,8 @@ package solutions.functions;
 
 import java.util.Scanner;
 
-public class Ques11 {
+public class Ques12 {
+  // Write a function to check if a given triplet is a Pythagorean triplet or not.
   public static boolean isPythagorasTriplets(int a, int b, int c) {
       if (a > b) {
         if (a > c) return a * a == b * b + c * c;
