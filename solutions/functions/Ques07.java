@@ -2,7 +2,7 @@ package solutions.functions;
 
 import java.util.Scanner;
 
-public class Ques7 {
+public class Ques07 {
   // Define a method to find out if a number is prime or not.
   public static boolean isPrime(int num) {
     int i = 2;

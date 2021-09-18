@@ -2,7 +2,7 @@ package solutions.functions;
 
 import java.util.Scanner;
 
-public class Ques9 {
+public class Ques09 {
   public static int factorial(int num) {
     if (num < 0) return -1;
     if (num == 1 || num == 0) return 1;

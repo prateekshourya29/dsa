@@ -2,7 +2,7 @@ package solutions.functions;
 
 import java.util.Scanner;
 
-public class Ques6 {
+public class Ques06 {
   // Write a program to print the circumference and area of a circle
   // of radius entered by user by defining your own method.
   public static double circumference(double radius) {

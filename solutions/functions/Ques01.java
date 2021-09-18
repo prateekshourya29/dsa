@@ -2,7 +2,7 @@ package solutions.functions;
 
 import java.util.Scanner;
 
-public class Ques1 {
+public class Ques01 {
   // Define two methods to print the maximum and the minimum number
   // respectively among three numbers entered by the user.
 

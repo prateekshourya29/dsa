@@ -2,7 +2,7 @@ package solutions.functions;
 
 import java.util.Scanner;
 
-public class Ques3 {
+public class Ques03 {
   //A person is eligible to vote if his/her age is greater than or equal to 18. 
   //Define a method to find out if he/she is eligible to vote.
   public static boolean isEligible(int age) {
