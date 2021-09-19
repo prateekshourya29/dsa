@@ -1,6 +1,6 @@
 package solutions.arrays.easy;
 
-public class Ques1 {
+public class Ques01 {
   // [Build Array from Permutation](https://leetcode.com/problems/build-array-from-permutation/)
   public int[] buildArray(int[] nums) {
     int[] ans = new int[nums.length];
