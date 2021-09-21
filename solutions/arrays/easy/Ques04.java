@@ -13,5 +13,5 @@ public class Ques04 {
             maximum_wealth = wealth;
     }
     return maximum_wealth;
-}
+  }
 }
