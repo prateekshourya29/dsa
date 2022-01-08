@@ -1,4 +1,6 @@
 package solutions.arrays.easy;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Ques06 {
   // [Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/)
