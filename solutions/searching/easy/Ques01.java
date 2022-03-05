@@ -3,6 +3,8 @@ package solutions.searching.easy;
 import java.util.Scanner;
 
 public class Ques01 {
+  // [Square Root](https://leetcode.com/problems/sqrtx/)
+
   public static int mySqrt(int x) {
     long start = 0;
     long end = x;

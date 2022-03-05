@@ -10,6 +10,8 @@ package solutions.searching.easy;
 */
 
 public class Ques02 {
+  // [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
+
   int guess(int num) {return 0;} // Dummy code to remove syntax error
   public int guessNumber(int n) {
     int start = 1, end = n, mid = -1;
