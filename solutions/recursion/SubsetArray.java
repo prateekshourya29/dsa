@@ -5,41 +5,30 @@ import java.util.List;
 
 // https://leetcode.com/problems/subsets/
 public class SubsetArray {
-  public static List<List<Integer>> subset(ArrayList<Integer> p, ArrayList<Integer> up) {
-    List<List<Integer>> ans = new ArrayList<>();
-    if (up.isEmpty()) {
-      ans.add(p);
-      return ans;
-    }
-
-    ArrayList<Integer> newUp = new ArrayList<>();
-    newUp.addAll(up);
-    newUp.remove(0);
-
-    ArrayList<Integer> leftP = new ArrayList<>();
-    leftP.addAll(p);
-    ans.addAll(subset(leftP, newUp));
-
-    ArrayList<Integer> rightP = new ArrayList<>();
-    rightP.addAll(p);
-    rightP.add(up.get(0));
-    ans.addAll(subset(rightP, newUp));
-
-    return ans;
-  }
-
   public static List<List<Integer>> subsets(int[] nums) {
-    ArrayList<Integer> up = new ArrayList<>();
+    List<List<Integer>> outer = new ArrayList<>();
+
+    outer.add(new ArrayList<>());
 
     for (int n : nums) {
-      up.add(n);
+      List<List<Integer>> inner = new ArrayList<>();
+
+      for (List<Integer> out : outer) {
+        List<Integer> inn = new ArrayList<>(out);
+        inn.add(n);
+        inner.add(inn);
+      }
+
+      for (List<Integer> inn : inner) {
+        outer.add(inn);
+      }
     }
 
-    return subset(new ArrayList<>(), up);
+    return outer;
   }
 
   public static void main(String[] args) {
-    int[] nums = {0};
+    int[] nums = {1, 2, 3};
     System.out.println(subsets(nums));
   }
 }
