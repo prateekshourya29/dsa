@@ -1,19 +1,19 @@
 package solutions.linkedlist;
 
 // Definition for singly-linked list.
-class ListNode {
+class LinkedListNode {
   int val;
-  ListNode next;
-  ListNode() {}
-  ListNode(int val) { this.val = val; }
-  ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+  LinkedListNode next;
+  LinkedListNode() {}
+  LinkedListNode(int val) { this.val = val; }
+  LinkedListNode(int val, LinkedListNode next) { this.val = val; this.next = next; }
 }
 
 // https://leetcode.com/problems/palindrome-linked-list/
 public class PalindromeLinkedList {
-  public boolean isPalindrome(ListNode head) {
+  public boolean isPalindrome(LinkedListNode head) {
     int n = 0;
-    ListNode temp = head;
+    LinkedListNode temp = head;
     
     while (temp != null) {
       temp = temp.next;

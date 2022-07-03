@@ -1,18 +1,18 @@
 package solutions.linkedlist;
 
 // Definition for singly-linked list.
-class ListNode {
+class ListN {
   int val;
-  ListNode next;
-  ListNode() {}
-  ListNode(int val) { this.val = val; }
-  ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+  ListN next;
+  ListN() {}
+  ListN(int val) { this.val = val; }
+  ListN(int val, ListN next) { this.val = val; this.next = next; }
 }
 
 // https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 public class RemoveDuplicates {
-  public ListNode deleteDuplicates(ListNode head) {
-    ListNode temp = head;
+  public ListN deleteDuplicates(ListN head) {
+    ListN temp = head;
     while (temp != null) {
       while (temp.next != null && temp.val == temp.next.val) {
         temp.next = temp.next.next;
