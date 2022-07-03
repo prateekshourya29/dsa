@@ -8,27 +8,26 @@ public class Combinations {
   public static List<List<Integer>> combination(List<Integer> list, int i, int n, int k) {
     List<List<Integer>> ans = new ArrayList<>();
     if (list.size() == k) {
-      ans.add(list);
+      List<Integer> l = new ArrayList<>(list);
+      ans.add(l);
       return ans;
     }
 
     for (int j = i; j <= n; j++) {
-      List<Integer> l = new ArrayList<>();
-      l.addAll(list);
-      l.add(j);
-      ans.addAll(combination(l, j + 1, n, k));
+      list.add(j);
+      ans.addAll(combination(list, j + 1, n, k));
+      list.remove(list.size() - 1);
     }
 
     return ans;
   } 
 
-  public static List<List<Integer>> combine(int n, int k) {
-    List<Integer> list = new ArrayList<>();
-    return combination(list, 1, n, k);
+  public static List<List<Integer>> combine(int n, int k) {    
+    return combination(new ArrayList<>(), 1, n, k);
   }
 
   public static void main(String[] args) {
     int n = 4, k = 2;
-    combine(n, k);
+    System.out.println(combine(n, k));
   }
 }
