@@ -2,6 +2,37 @@ package solutions.linkedlist;
 
 // https://leetcode.com/problems/rotate-list/
 public class RotateList {
+  // Best Approach
+  public ListNode rotateRightBest(ListNode head, int k) {
+    if (head == null || head.next == null || k == 0) {
+      return head;
+    }
+    
+    int n = 1;
+    ListNode end = head;
+    
+    while (end.next != null) {
+      end = end.next;
+      n++;
+    }
+    
+    k = k % n;
+    
+    if (k == 0) return head;
+    
+    ListNode start = head;
+    for (int i = 1; i < n - k; i++) {
+      start = start.next;
+    }
+    
+    ListNode temp = start.next;
+    start.next = null;
+    end.next = head;
+    head = temp;
+    
+    return head;
+  }
+
 	// Simple Solution
 	public ListNode rotateRight(ListNode head, int k) {
     if (head == null || head.next == null) {
