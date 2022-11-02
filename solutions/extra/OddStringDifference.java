@@ -2,6 +2,7 @@ package solutions.extra;
 
 import java.util.Arrays;
 
+// https://leetcode.com/problems/odd-string-difference/
 public class OddStringDifference {
   public static int[] getDifference(String word) {
     char[] w = word.toCharArray();
