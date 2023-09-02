@@ -39,7 +39,7 @@ public class Patterns {
 
   static void pattern5(int n) {
     for (int row = 1; row <= 2 * n - 1; row++) {
-      int totalNoOfColumn = row > n ?  2 * n - row : row;
+      int totalNoOfColumn = row > n ? 2 * n - row : row;
       for (int col = 1; col <= totalNoOfColumn; col++) {
         System.out.print("*");
       }
@@ -50,8 +50,10 @@ public class Patterns {
   static void pattern6(int n) {
     for (int row = 1; row <= n; row++) {
       for (int col = 1; col <= n; col++) {
-        if (col <= n - row) System.out.print(" "); 
-        else System.out.print("*");
+        if (col <= n - row)
+          System.out.print(" ");
+        else
+          System.out.print("*");
       }
       System.out.println();
     }
@@ -60,8 +62,10 @@ public class Patterns {
   static void pattern7(int n) {
     for (int row = n; row >= 1; row--) {
       for (int col = 1; col <= n; col++) {
-        if (col <= n - row) System.out.print(" "); 
-        else System.out.print("*");
+        if (col <= n - row)
+          System.out.print(" ");
+        else
+          System.out.print("*");
       }
       System.out.println();
     }
@@ -98,8 +102,10 @@ public class Patterns {
   static void pattern10(int n) {
     for (int row = 1; row <= n; row++) {
       for (int col = 1; col <= n; col++) {
-        if (row < n - col + 1) System.out.print(" "); 
-        else System.out.print("* ");
+        if (row < n - col + 1)
+          System.out.print(" ");
+        else
+          System.out.print("* ");
       }
       System.out.println();
     }
@@ -108,8 +114,10 @@ public class Patterns {
   static void pattern11(int n) {
     for (int row = n; row >= 1; row--) {
       for (int col = 1; col <= n; col++) {
-        if (row < n - col + 1) System.out.print(" "); 
-        else System.out.print("* ");
+        if (row < n - col + 1)
+          System.out.print(" ");
+        else
+          System.out.print("* ");
       }
       System.out.println();
     }
@@ -124,8 +132,10 @@ public class Patterns {
     for (int row = 1; row <= 2 * n - 1; row++) {
       int totalNoOfSpace = Math.abs(row - n);
       for (int col = 1; col <= n; col++) {
-        if (col <= totalNoOfSpace) System.out.print(" ");
-        else System.out.print("* ");
+        if (col <= totalNoOfSpace)
+          System.out.print(" ");
+        else
+          System.out.print("* ");
       }
       System.out.println();
     }
